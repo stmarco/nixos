@@ -19,23 +19,19 @@
     firewall.enable = false;
     hostName = "nix-llm";
     interfaces.ens18 = {
-      useDHCP = false;
-      ipv4.addresses = [{
-        address = "10.42.37.100";
-        prefixLength = 24;
-      }];
+      useDHCP = true;
     };
-    defaultGateway = "10.42.37.254";
-    nameservers = [ "10.42.37.254" ];
+    defaultGateway = "192.168.22.254";
+    nameservers = [ "8.8.8.8" ];
   };
 
   # System localization
-  time.timeZone = "America/New_York";
-  i18n.defaultLocale = "en_US.UTF-8";
+  time.timeZone = "Belgium/Brussels";
+  i18n.defaultLocale = "nl_BE.UTF-8";
 
   services.xserver = {
     enable = false;
-    videoDrivers = [ "nvidia" ];
+    videoDrivers = [ "nvidia" "intel" ];
   };
 
   services.openssh = {
