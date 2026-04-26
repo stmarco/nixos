@@ -26,7 +26,7 @@
   };
 
   # System localization
-  time.timeZone = "Belgium/Brussels";
+  time.timeZone = "Europe/Brussels";
   i18n.defaultLocale = "nl_BE.UTF-8";
 
   services.xserver = {

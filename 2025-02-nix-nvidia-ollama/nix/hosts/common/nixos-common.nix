@@ -3,8 +3,8 @@ let
   inherit (inputs) nixpkgs nixpkgs-unstable;
 in
 {
-  time.timeZone = "Belgium/Brussels";
-  system.stateVersion = "24.11";
+  time.timeZone = "Europe/Brussels";
+  system.stateVersion = "25.11";
 
   virtualisation = {
     docker = {
